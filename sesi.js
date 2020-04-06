@@ -41,3 +41,29 @@ function tempo(segundos){
 	cp.hide("b_next");
 	window.cancel = setInterval(contador_tempo, 1000);
 }
+
+var fullscreen = 0;
+function fullScreenButton() {
+    let j = $('[id^="fullscreen"]').on('click', function (e) {
+        let i = parent.document.getElementsByTagName("iframe")[0];
+        if (i == null) { i = document.getElementById("main_container") }
+        if (fullscreen == 1) {
+            console.log("estava full");
+            fullscreen = 0;
+            let i = parent.document;
+            i.cancelFullScreen && i.cancelFullScreen();
+            i.webkitCancelFullScreen && i.webkitCancelFullScreen();
+            i.mozCancelFullScreen && i.mozCancelFullScreen();
+            i.exitFullscreen && i.exitFullscreen();
+        }
+        else {
+            console.log("estrou em full");
+            fullscreen = 1;
+            i.requestFullScreen && i.requestFullScreen();
+            i.webkitRequestFullScreen && i.webkitRequestFullScreen();
+            i.mozRequestFullScreen && i.mozRequestFullScreen();
+            i.msRequestFullscreen && i.msRequestFullscreen();
+        }
+    });
+};
+fullScreenButton();
