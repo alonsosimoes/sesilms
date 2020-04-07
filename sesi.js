@@ -5,7 +5,7 @@ var cpInfoCurrentSlide = window.cpAPIInterface.getCurrentFrame();
 var visitados = new Array(254);
 
 mostrar_tempo = 0;
-
+// Ajuste do cronômetro
 function contador_tempo() {
 		if(window.visitados[cpInfoCurrentSlide] <= 0){
 			clearInterval(window.cancel);
