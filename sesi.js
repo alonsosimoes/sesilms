@@ -4,7 +4,7 @@ var cpInfoCurrentSlide = window.cpAPIInterface.getCurrentFrame();
 
 var visitados = new Array(254);
 
-mostrar_tempo = 2000;
+mostrar_tempo = 5000;
 var revelar = 0;
 // Ajuste do cronômetro
 function contador_tempo() {
