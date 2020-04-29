@@ -1,7 +1,10 @@
-/*.woff
-    Access-Control-Allow-Origin: *
-    Content-Type: application/font-woff
-    
-/*.woff2
-    Access-Control-Allow-Origin: *
-    Content-Type: application/font-woff2
+[[headers]]
+for = "/*.woff"
+[headers.values]
+Access-Control-Allow-Origin = "*"
+Content-Type = "application/font-woff"
+[[headers]]
+for = "/*.woff2"
+[headers.values]
+Access-Control-Allow-Origin = "*"
+Content-Type = "application/font-woff2"
