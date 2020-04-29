@@ -1,10 +1,5 @@
-var mostrar_tempo = window.cpAPIInterface.getCurrentFrame();
 var cancel;
-var cpInfoCurrentSlide = window.cpAPIInterface.getCurrentFrame();
-
 var visitados = new Array(254);
-
-mostrar_tempo = 0;
 
 function contador_tempo() {
 		if(window.visitados[cpInfoCurrentSlide] <= 0){
@@ -35,6 +30,8 @@ function transformar(s){
 
 function tempo(segundos){
 	clearInterval(window.cancel);
+	window.mostrar_tempo = 0;
+	console.log(window.visitados);
 	if(typeof window.visitados[cpInfoCurrentSlide] === 'undefined'){
 		window.visitados[cpInfoCurrentSlide] = segundos;
 	}
